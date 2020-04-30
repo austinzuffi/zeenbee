@@ -1,3 +1,4 @@
+<ngb-alert *ngIf="!staticAlertClosed" (close)="staticAlertClosed = true">{{instructs}}</ngb-alert>
 <div class="row" *ngIf="whatList">
 	<div class="col-12 text-center pl-0 pr-0" >
 		<div *ngFor="let what of whatList">

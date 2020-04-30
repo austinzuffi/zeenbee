@@ -14,6 +14,10 @@ export class FruitComponent implements OnInit {
 	public whatUrl: string;
 	public instructs = 'Scroll downnnnnnnnn!';
 
+	//self-closing alert
+	staticAlertClosed = false;
+
+
   constructor(
 		private route: ActivatedRoute,
 		private whatService: WhatService
@@ -25,7 +29,11 @@ export class FruitComponent implements OnInit {
 			this.whatList = [];
 			this.getWhat();
 		});
-  }
+
+		//self-closing alert
+		setTimeout(() => this.staticAlertClosed = true, 10000);
+	}
+
 
 	getWhat() {
 		this.whatService.getWhat(this.directory).subscribe(
