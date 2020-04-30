@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "zeenbee"
+    }
+  },
+  "defaultProject": "zeenbee",
+  "cli": {
+    "analytics": "8555c7f0-aa95-43d4-8359-3fd60feb5b0a"
+  }
 }

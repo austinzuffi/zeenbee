@@ -1,0 +1,7 @@
+<div class="row" *ngIf="whatList">
+	<div class="col-12 text-center pl-0 pr-0" >
+		<div *ngFor="let what of whatList">
+			<img class="img-fluid rounded" [src]="what | what:whatUrl">
+		</div>
+	</div>
+</div>

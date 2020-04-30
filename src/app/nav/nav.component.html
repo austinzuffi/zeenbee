@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+
+		<!-- there's my brand icon -->
+    <a class="navbar-brand d-md-block" routerLink="/">
+        <img 
+            src="../../assets/icon.png" 
+            srcset="../../assets/icon-2x.png 2x" 
+            class="d-inline-block align-top" alt="">
+    </a>
+
+		<!-- there's a button -->
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            [attr.aria-expanded]="!isCollapsed" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+		<!-- the stuff that actually appears onButton -->
+    <div [ngbCollapse]="isCollapsed" (click)="isCollapsed = true" class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" *ngIf="whatKeys">
+            <li class="nav-item " *ngFor="let key of whatKeys">
+                <a class="nav-link" routerLink="/{{key | what}}" routerLinkActive="active">{{key | what}}</a>
+            </li>
+        </ul>
+    </div>
+</nav>

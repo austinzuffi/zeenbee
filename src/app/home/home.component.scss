@@ -1,0 +1,12 @@
+/* Medium devices (tablets, 768px and up)
+ */
+#homeComponent {
+	margin-left: auto;
+	margin-right: auto;
+}
+@media (min-width: 768px) {
+	#homeComponent {
+		max-width: 872px;
+	}
+}
+

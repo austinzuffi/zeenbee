@@ -1,0 +1,43 @@
+<div class="row" 
+		 id="homeComponent"
+		 ngbTooltip={{tooltip}}
+		 triggers="click:blur">
+	<div class="col-12" *ngFor="let what of whatList">
+		<div class="col-12 embed-responsive embed-responsive-16by9" *ngIf="what|what:whatUrl">
+			<video class="d-block mx-auto embed-responsive-item" 
+						 width="872"
+						 controls 
+						 type="video/mp4"
+						 [src]="what | what:whatUrl">
+				loading video! boop... beep.
+			</video>
+		</div>
+		<!--<iframe class="d-block mx-auto" src="https://drive.google.com/file/d/1D2UYEW6Uef898Zuk47HzRp1SAuLFHpNn/preview" width="640" height="480"></iframe>-->
+	</div>
+	<div class="col-12">
+		<img src="../../assets/invite.jpg" class="img-fluid mx-auto rounded">
+		<p class="mt-1 lead">{{blurb}}</p>
+		<p class="mt-1 lead">{{blurb2}}</p>
+	</div>
+	<div class="col-12 media mb-3">
+		<a href="https://open.spotify.com/user/adamzuffi/playlist/3uNOYdks1hAp7GjjB0gCDq"
+			 target="_blank"
+			 ngbTooltip={{spotify}}
+			 placement="top"
+			 class="d-flex">
+			<img class="d-flex align-self-center mr-3"
+					 src="../../assets/spotify.jpg"
+					 srcset="../../assets/spotify-2x.jpg 2x"
+					 alt={{spotify}}>
+		</a>
+		<div class="media-body">
+			<p class="lead">{{claim}}</p>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<img src="../../assets/invite-front.jpg" (click)='bottomImgClicked()' class="img-fluid rounded">
+	</div>
+	<div class="col-md-6">
+		<img src="../../assets/invite-back.jpg" (click)='bottomImgClicked()' class="img-fluid rounded">
+	</div>
+</div>
